@@ -3,15 +3,12 @@
   "version": "0.0.8",
   "dependencies": {
     "oauth": "0.9.12",
-    "easyxml": "1.0.0",
-    "xml2js": "0.4.4",
-    "inflect": "0.3.0"
   },
   "description": "Xero.com Node Library",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:thallium205/xero.git"
+    "url": "git@github.com:reactual/xero.git"
   },
   "keywords": [
     "xero",
