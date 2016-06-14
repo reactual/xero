@@ -1,8 +1,5 @@
 var crypto  = require("crypto");
 var oauth   = require("oauth");
-var EasyXml = require('easyxml');
-var xml2js = require('xml2js');
-var inflect = require('inflect');
 
 var XERO_BASE_URL = 'https://api.xero.com';
 var XERO_API_URL = XERO_BASE_URL + '/api.xro/2.0';
@@ -22,10 +19,8 @@ function Xero(key, secret, rsa_key, showXmlAttributes, customHeaders) {
 
 Xero.prototype.call = function(method, path, body, callback) {
     var self = this;
-
-    var post_body = null;
     var content_type = 'application/json';
-    return self.oa._performSecureRequest(self.key, self.secret, method, XERO_API_URL + path, null, post_body, content_type, callback);
+    return self.oa._performSecureRequest(self.key, self.secret, method, XERO_API_URL + path, null, null, content_type, callback);
 }
 
 module.exports = Xero;
